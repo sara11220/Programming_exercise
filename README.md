@@ -1,13 +1,14 @@
-Input handling:
+# IDExtractor Project
 
-- The program prompts the user to enter an 11-digit identification number using Scanner.
-- The input is read as a long to handle large numbers without losing precision.
-  
-Year extraction:
+This project contains a Java program that extracts the year from an 11-digit identification number.
 
-- The extractYear method converts the number to a string, checks its length to ensure it's 11 digits, and extracts the first two digits to represent the year.
-- If the input does not meet the length requirement, an IllegalArgumentException is thrown.
-  
-Main method:
+## How to Run
 
-- The main method reads the input from the user, calls the extractYear method, and prints the extracted year.
+1. Clone the repository.
+2. Compile the Java code: `javac src/main/java/com/yourusername/idextractor/IDExtractor.java`.
+3. Run the program: `java com.yourusername.idextractor.IDExtractor`.
+
+## Example
+
+Input: `86021912345`  
+Output: `86`
