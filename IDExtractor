@@ -9,7 +9,7 @@ public class IDExtractor {
      * Extracts the year from the given identification number.
      *
      * @param idNumber A long representing the identification number. It must be exactly 11 digits long.
-     * @return An integer representing the year extracted from the identification number.
+     * @return An integer representing the year extracted from the identification number. 
      * @throws IllegalArgumentException If the input is not exactly 11 digits long or is invalid.
      */
     public static int extractYear(long idNumber) {
