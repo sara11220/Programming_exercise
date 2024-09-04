@@ -1,0 +1,7 @@
+src/
+  └── main/
+      └── java/
+          └── com/
+              └── sara11220/
+                  └── idextractor/
+                      └── IDExtractor.java
