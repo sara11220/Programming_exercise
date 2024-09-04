@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+/**
+ * This class provides a method to extract the year from a given identification number.
+ */
+public class IDExtractor {
+
+    /**
+     * Extracts the year from the given identification number.
+     *
+     * @param idNumber A long representing the identification number. It must be exactly 11 digits long.
+     * @return An integer representing the year extracted from the identification number.
+     * @throws IllegalArgumentException If the input is not exactly 11 digits long or is invalid.
+     */
+    public static int extractYear(long idNumber) {
+        // Convert the number to a string to manipulate it
+        String idStr = String.valueOf(idNumber);
+
+        // Validate the input length
+        if (idStr.length() != 11) {
+            throw new IllegalArgumentException("Input must be exactly 11 digits long.");
+        }
+
+        // Extract the first two digits as a substring
+        String yearPrefix = idStr.substring(0, 2);
+
+        // Convert the substring to an integer
+        return Integer.parseInt(yearPrefix);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the identification number
+        System.out.println("Please enter the identification number (11 digits): ");
+        long idNumber = scanner.nextLong();
+
+        try {
+            // Extract the year and display the result
+            int year = extractYear(idNumber);
+            System.out.println("The extracted year is: " + year);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: " + e.getMessage());
+        } finally {
+            scanner.close();
+        }
+    }
+}
